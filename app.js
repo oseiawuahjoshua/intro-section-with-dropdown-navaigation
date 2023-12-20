@@ -21,44 +21,40 @@ closeMenu.on('click', () => {
     // shadow.hide();
 });
 
-
-
-
-const arrows = {
-    up: "icon-arrow-up.svg",
+const buttons={
+    up:"icon-arrow-up.svg",
     down: "icon-arrow-down.svg"
 }
 
-const droppables= document.querySelectorAll('.droppable');
-droppables.forEach(dropper =>{
-    dropper.addEventListener('click', (e)=>{
+const droppables = document.querySelectorAll('.droppable')
+droppables.forEach(dropper=>{
+    dropper.addEventListener('click',()=>{
 
-        const Arrays= Array.from(droppables);
-
-        const clickIndex = Arrays.indexOf(dropper)
-
-        if(dropper.querySelector('.drop-downbtn').getAttribute('src') == arrows.up){
-            closeDropdown(dropper)
+        const arrays= Array.from(droppables)
+        const clickIndex= arrays.indexOf(dropper)
+        
+        if(dropper.querySelector('.drop-downbtn').getAttribute('src')== buttons.up){
+            closeDropper(dropper);
         }else{
-            openDropdown(dropper)
+            openDropper(dropper);
 
-            Arrays.forEach(otherDropper => {
-                if (Arrays.indexOf(otherDropper) !== clickIndex) {
-                    closeDropdown(otherDropper)
+
+            droppables.forEach(otherDropper => {
+                if (arrays.indexOf(otherDropper) !== clickIndex) {
+                    closeDropper(otherDropper)
                 }
-            }) 
-        }  
+            })  
+        }
     })
+
+
 })
-
-
-function closeDropdown(dropper) {
-    dropper.querySelector('.dropdown').style.display ='none'
-    dropper.querySelector('.drop-downbtn').setAttribute('src', arrows.down);
+function openDropper(dropper){
+    dropper.querySelector('.dropdown').style.display ='block'
+    dropper.querySelector('.drop-downbtn').setAttribute("src", buttons.up)
 }
-
-function openDropdown(dropper) {
-    dropper.querySelector('.dropdown').style.display= 'block';
-    dropper.querySelector('.drop-downbtn').setAttribute('src', arrows.up);
+function closeDropper(dropper){
+    dropper.querySelector('.dropdown').style.display='none';
+    dropper.querySelector('.drop-downbtn').setAttribute("src",buttons.down);
+   
 }
-

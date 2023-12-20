@@ -152,6 +152,7 @@ img{
         flex-basis: 100%;
         align-items: start;
         position: static;
+        background-color: transparent;
     }
     .menu-btn{
         display: none;
