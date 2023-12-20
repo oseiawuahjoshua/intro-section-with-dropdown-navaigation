@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.svg" alt="an image of the company's logo" class="logo">
+        <nav>
+
+            <ul class="ul">
+                <li class="features droppable"><span>Features</span> <img src="icon-arrow-down.svg" alt="an arrow down icon" class="drop-downbtn">
+
+                    <ul class="dropdown">
+                        <li><img src="icon-todo.svg" alt="a todolist icon">Todo List</li>
+                        <li> <img src="icon-calendar.svg" alt=" a calendar icon"> Calendar</li>
+                        <li><img src="icon-reminders.svg" alt="a reminder icon">Reminders</li>
+                        <li><img src="icon-planning.svg" alt="a panning icon">Planning</li>
+                    </ul>
+
+                </li>
+                <li class="company droppable"><span >Company</span> <img src="icon-arrow-down.svg" alt="an arrow down icon" class="drop-downbtn"> <img src="icon-arrow-up.svg" alt="an arrow up icon" class="up-arrow">
+
+                    <ul class="dropdown ">
+                        <li>History</li>
+                        <li>Our Team</li>
+                        <li>Blog</li>
+                    </ul>
+                
+                </li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href="">Register</a></li>
+            </ul>
+
+                <div class="icons">
+                    <img src="icon-menu.svg" alt="an icon to trigger the menu" class="menu-btn">
+                    <img src="icon-close-menu.svg" alt="icon to close the menu on mobiles" class="close-btn">
+                </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="images">
+            <picture>
+                <source media="(min-width:1107px)" srcset="image-hero-desktop.png">
+                <img src="image-hero-mobile.png" alt="image of a man with a laptop">
+
+            </picture>
+
+        </section>
+        <section class="images-description">
+            <h1>Make remote Work</h1>
+            <p>Get your team in sync, no matter the location. Streamline processes. create team rituals and watch productivity soar.</p>
+            
+            <a href="#" class="learnmore">Learn more</a>
+
+            <ul class="clientIcons">
+                <li><img src="client-databiz.svg" alt="an icon that represents databiz"></li>
+                <li><img src="client-audiophile.svg" alt="an icon that represents audiophile"></li>
+                <li><img src="client-meet.svg" alt="an icon that represents meet"></li>
+                <li><img src="client-maker.svg" alt="an icon that represents the client maker"></li>
+            </ul>
+        </section>
+
+    </main>
+
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
